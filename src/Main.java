@@ -3,14 +3,13 @@ import java.time.LocalDate;
 public class Main {
     public static void main(String[] args) {
         task1();
-        task2();
+        task2(0, 2015);
         task3();
-
     }
 
     public static void task1() {
         System.out.println("Задача 1");
-        int year = 2021;
+        int year = 2023;
         checkYear(year);
     }
 
@@ -22,24 +21,20 @@ public class Main {
         }
     }
 
-    public static void task2() {
+    public static void task2(int clientOs, int clientDeviceYear) {
         int currentYear = LocalDate.now().getYear();
-        int clientDeviceYear = 2015;
-        int clientOs = 1;
-        installMobileApp(clientOs, clientDeviceYear, currentYear);
-    }
-
-    public static void installMobileApp(int clientOs, int clientDeviceYear, int currentYear) {
+        int iOs = 0;
+        int android = 1;
         if (clientDeviceYear < currentYear) {
-            if (clientOs == 0) {
+            if (clientOs == iOs) {
                 System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-            } else if (clientOs == 1) {
+            } else if (clientOs == android) {
                 System.out.println("Установите облегченную версию приложения для Android по ссылке");
             }
         } else {
-            if (clientOs == 0) {
+            if (clientOs == iOs) {
                 System.out.println("Установите обычную версию приложения для iOS");
-            } else if (clientOs == 1) {
+            } else if (clientOs == android) {
                 System.out.println("Установите обычную версию приложения для Android");
             }
         }
